@@ -41,7 +41,9 @@
       <section class="header section">
         <div class="container">
           <h1 class="header-text">Efektywne rozwiązania dla Waszego biznesu</h1>
-          <button class="header-button" type="button">Zamów usługę</button>
+          <button class="header-button" type="button" data-modal-open>
+            Zamów usługę
+          </button>
         </div>
       </section>
       <div>
@@ -403,5 +405,11 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="close-button" data-modal-close>X</button>
+      </div>
+    </div>
+    <script src="js/modal.js"></script>
   </body>
 </html>
