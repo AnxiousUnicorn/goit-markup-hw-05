@@ -472,6 +472,7 @@ rect {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0;
+  z-index: 1;
 }
 
 .project-item:hover {
@@ -487,6 +488,8 @@ rect {
   left: 0;
   padding: 0;
   max-height: 294px;
+  z-index: 2;
+  overflow: hidden;
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -511,7 +514,8 @@ rect {
   color: rgba(255, 255, 255, 1);
   background: rgba(33, 150, 243, 0.9);
   opacity: 0;
-  transition-property: transform, opacity;
+  z-index: -1;
+  transition-property: transform, opacity, z-index;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-delay: 0;
@@ -520,6 +524,7 @@ rect {
 .project-item:hover .project-description {
   transform: translateY(-294px);
   opacity: 100;
+  z-index: 3;
 }
 
 .project-name {
